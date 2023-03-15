@@ -11,7 +11,7 @@ const Product = new Schema({
     images: {type: String, required: true},
     category: {type: String, required: true},
     brand: {type: String, required: true},
-    count: {type: Number, required: true}
+    count: {type: Number, default: 0}
 })
 
 module.exports = model("Product", Product)
