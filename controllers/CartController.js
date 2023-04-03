@@ -143,10 +143,6 @@ class CartController {
                 return res.status(404).json(response);
             }
 
-            for (const productCart of cart.cartProduct) {
-                await CartProduct.findByIdAndDelete(productCart._id);
-            }
-
             cart.cartProduct = [];
             await cart.save();
 
